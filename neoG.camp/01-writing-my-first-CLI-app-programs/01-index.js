@@ -168,7 +168,7 @@
 // }
 
 // ex14: club everything to make the game
-var readlineSync = require('readline-sync');
+var readlineSync = require("readline-sync");
 var score = 0;
 var username = readlineSync.question("What's your name? ");
 console.log("Welcome " + username + ", do you know Shaswata?");
@@ -176,7 +176,8 @@ console.log("Welcome " + username + ", do you know Shaswata?");
 // play function
 function play(question, answer) {
     var userAnswer = readlineSync.question(question);
-    if (userAnswer === answer) {
+    
+    if (userAnswer.toUpperCase() === answer.toUpperCase()) {
         console.log("right!");
         score = score + 1;
     } else {
@@ -199,7 +200,7 @@ var questions = [{
 }
 ]
 
-// loop
+// loop-function call
 for (let i = 0; i < questions.length; i++) {
     play(questions[i].question, questions[i].answer);
 }
