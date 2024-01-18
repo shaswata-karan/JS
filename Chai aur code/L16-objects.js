@@ -1,37 +1,43 @@
 // singleton
-// Object.create
+// Object.create | this is another method namely constructor methon. In this singleton is created
 
-// object literals
+// object-literals
 
-const mySym = Symbol("key1");
+const mySym = Symbol("key1")
 
 const JsUser = {
-  name: "Hitesh",
-  "full name": "Hitesh Choudhary",
-  [mySym]: "mykey1",
-  age: 18,
-  location: "Jaipur",
-  email: "hitesh@google.com",
-  isLoggedIn: false,
-  lastLoginDays: ["Monday", "Saturday"],
-};
+    name: "Shaswata",
+    "full name": "Shaswata Karan",
+    [mySym]: "mykey1",
+    age: "22",
+    location: "Kolkata",
+    isLoggedIn: false,
+    lastLoginDys: ["Monday", "Tuesday"]
+}
 
-// console.log(JsUser.email)
-// console.log(JsUser["email"])
-// console.log(JsUser["full name"])
-// console.log(JsUser[mySym])
+// console.log(JsUser.name)
+// console.log(JsUser["name"]);
+// console.log(JsUser["full name"]);
+// console.log(JsUser[mySym]);
+// console.log(typeof JsUser[mySym])
 
-JsUser.email = "hitesh@chatgpt.com";
+// JsUser.age = "23"
+// console.log(JsUser.age)
+
 // Object.freeze(JsUser)
-JsUser.email = "hitesh@microsoft.com";
-// console.log(JsUser);
 
-JsUser.greeting = function () {
-  console.log("Hello JS user");
-};
-JsUser.greetingTwo = function () {
-  console.log(`Hello JS user, ${this.name}`);
-};
+// JsUser.age = "25"; // object value will not change because it has been freezed.
+// console.log(JsUser.age);
 
-console.log(JsUser.greeting());
-console.log(JsUser.greetingTwo());
+// console.log(JsUser)
+
+JsUser.greeting = function(){
+    console.log("Hello JS user")
+}
+// console.log(JsUser.greeting);
+
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this.name}`);
+};
+console.log(JsUser.greeting()); // object -> anonymous
+console.log(JsUser.greetingTwo()); // object -> anonymous
