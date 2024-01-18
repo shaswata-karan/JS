@@ -1,8 +1,7 @@
-// singleton
-// Object.create | this is another method namely constructor methon. In this singleton is created
+// Objects are of two types -> 1.singleton 2.literals
+// Object.create | this is another method namely constructor method. In this singleton is created.
 
 // object-literals
-
 const mySym = Symbol("key1")
 
 const JsUser = {
